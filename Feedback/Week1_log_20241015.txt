@@ -1,0 +1,695 @@
+Starting code feedback for Anna, Week1
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 1.56 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: Feedback, week1, .git
+
+Found the following files in parent directory: README.md, Agent
+
+Checking for key files in parent directory...
+
+.gitignore missing, 1 pt deducted
+
+Current Points = 99
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+
+**********************************************************************
+My CMEE Coursework Repository
+
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 1 weekly directories: week1
+
+The Week1 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK1...
+
+Found the following directories: data, Results, code, sandbox
+
+Found the following files: README.md
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+
+**********************************************************************
+# CMEE bootcamp Week1
+    Week 1 coursework of the Biological Computiating Bootcamp
+
+## Description
+    This week covered Shell Sctipting, bash and Git Version Control.
+
+## Languages 
+    shell script
+    plain txt
+
+## Dependencies
+    none
+
+## Installation
+    none
+
+## Project Structure and Usage
+    Code: contains script files
+    Data: is where all the data used has been collected
+    Results: where the results from the code are
+
+
+Anna Cavalieri Canosa
+    ac524@ic.ac.uk
+
+
+
+
+**********************************************************************
+
+Results directory is empty - good! 
+
+Found 13 code files: variables.sh, myscript.sh, FirstBiblio.bib, MyExampleScript.sh, ConcatenateTwoFiles.sh, CompileLaTeX.sh, tabtocsv.sh, FirstExample.tex, tiff2png.sh, csvtospace.sh, CountLines.sh, boilerplate.sh, UnixPrac1.txt
+
+Found the following extra files: FirstExample.blg, FirstExample.bbl, FirstExample.pdf, typescript
+0.5 pt deducted per extra file
+
+Current Points = 97.0
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file variables.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/sh
+
+## Illustrates the use of variables 
+
+# Special variables
+
+echo "This script was called with $# parameters"
+echo "The script's name is $0"
+echo "The arguments are $@"
+echo "The first argument is $1"
+echo "The second argument is $2"
+
+# Assigned Variables; Explicit declaration:
+MY_VAR='some string' 
+echo 'the current value of the variable is:' $MY_VAR
+echo
+echo 'Please enter a new string'
+read MY_VAR
+echo
+echo 'the current value of the variable is:' $MY_VAR
+echo
+
+## Assigned Variables; Reading (multiple values) from user input:
+echo 'Enter two numbers separated by space(s)'
+read a b
+echo
+echo 'you entered' $a 'and' $b '; Their sum is:'
+
+## Assigned Variables; Command substitution
+MY_SUM=$(expr $a + $b)
+echo $MY_SUM
+
+
+
+**********************************************************************
+
+Testing variables.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+This script was called with 0 parameters
+The script's name is variables.sh
+The arguments are 
+The first argument is 
+The second argument is 
+the current value of the variable is: some string
+
+Please enter a new string
+
+the current value of the variable is:
+
+Enter two numbers separated by space(s)
+
+you entered and ; Their sum is:
+
+
+**********************************************************************
+
+Encountered error (or warning):
+
+***IGNORE IF THIS ERROR IS EXPECTED AS PART OF AN IN-CLASS EXERCISE***
+
+expr: syntax error: missing argument after ‘+’
+
+======================================================================
+Inspecting script file myscript.sh...
+
+File contents are:
+
+**********************************************************************
+script
+
+**********************************************************************
+
+Testing myscript.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Script started, output log file is 'typescript'.
+[?2004h]0;mhasoba@mhasoba-cha-dyesktop: ~/Documents/Teaching/IC_CMEE/2024-25/Coursework/StudentRepos/AnnaCavalieriCanosa_ac524/week1/codemhasoba@mhasoba-cha-dyesktop:~/Documents/Teaching/IC_CMEE/2024-25/Coursework/StudentRepos/AnnaCavalieriCanosa_ac524/week1/code$ Script done.
+
+**********************************************************************
+
+Encountered error (or warning):
+
+***IGNORE IF THIS ERROR IS EXPECTED AS PART OF AN IN-CLASS EXERCISE***
+
+
+Session terminated, killing shell... ...killed.
+
+======================================================================
+Inspecting script file FirstBiblio.bib...
+
+File contents are:
+
+**********************************************************************
+@article{verhulst1838notice,
+  title={Notice sur la loi que la population suit dans son accroissement},
+  author={Verhulst, Pierre-Fran{\c{c}}ois},
+  journal={Corresp. Math. Phys.},
+  volume={10},
+  pages={113--126},
+  year={1838}
+}
+
+**********************************************************************
+
+Testing FirstBiblio.bib...
+
+======================================================================
+Inspecting script file MyExampleScript.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/sh
+
+MSG1="Hello"
+MSG2=$USER
+echo "$MSG1 $MSG2"
+echo "Hello U=$USER"
+echo
+
+**********************************************************************
+
+Testing MyExampleScript.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Hello mhasoba
+Hello U=mhasoba
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00331s
+
+======================================================================
+Inspecting script file ConcatenateTwoFiles.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+
+
+#check that 2 files have been imported
+if [ "$#" -ne 2 ]; then 
+    echo "Import 2 files"
+    exit 1
+    
+fi 
+
+echo "you have imported "$1" and "$2""
+
+# check that both files exist
+if [ ! -f "$1" ]; then
+    echo "The first file input is not a valid file" 
+    exit 1
+fi 
+
+
+if
+    [ ! -f "$2" ]; then
+    echo "The second file input is not a valid file" 
+    exit 1
+fi 
+
+#create a new file to put 2 combines files in
+output_file="output.txt"
+touch "$output_file"
+
+cat "$1" > "$output_file"
+cat "$2" >> "$output_file"
+
+cat "$output_file"
+exit 0
+
+
+**********************************************************************
+
+Testing ConcatenateTwoFiles.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Import 2 files
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00312s
+
+======================================================================
+Inspecting script file CompileLaTeX.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+pdflatex $1.tex
+bibtex $1
+pdflatex $1.tex
+pdflatex $1.tex
+evince $1.pdf &
+
+##cleanup 
+rm *.aux
+rm *.log
+rm .*bbl
+rm .*blg
+
+**********************************************************************
+
+Testing CompileLaTeX.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/usr/share/texlive/texmf-dist/tex/latex/tools/.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+File ignored)
+*
+! Emergency stop.
+<*> 
+    
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on .log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+**********************************************************************
+
+Encountered error (or warning):
+
+***IGNORE IF THIS ERROR IS EXPECTED AS PART OF AN IN-CLASS EXERCISE***
+
+bibtex: Need exactly one file argument.
+Try `bibtex --help' for more information.
+rm: cannot remove '*.aux': No such file or directory
+rm: cannot remove '*.log': No such file or directory
+rm: cannot remove '.*bbl': No such file or directory
+rm: cannot remove '.*blg': No such file or directory
+
+(process:144343): Gtk-WARNING **: 07:29:03.693: Locale not supported by C library.
+	Using the fallback 'C' locale.
+
+(evince:144343): Gtk-WARNING **: 07:29:03.744: Theme parsing error: gtk-keys.css:1:0: Failed to import: Error opening file /snap/code/172/usr/share/themes/Default/gtk-3.0/gtk-keys.css: Permission denied
+Gtk-Message: 07:29:03.745: Failed to load module "canberra-gtk-module"
+Gtk-Message: 07:29:03.746: Failed to load module "canberra-gtk-module"
+/home/mhasoba/snap/code/common/.cache/gio-modules/libdconfsettings.so: cannot open shared object file: Permission denied
+Failed to load module: /home/mhasoba/snap/code/common/.cache/gio-modules/libdconfsettings.so
+
+** (evince:144343): WARNING **: 07:29:04.020: set_filenames: Error when getting information for file ?/home/mhasoba/Documents/Teaching/IC_CMEE/2024-25/Coursework/StudentRepos/AnnaCavalieriCanosa_ac524/week1/code/.pdf?: No such file or directory
+
+======================================================================
+Inspecting script file tabtocsv.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/sh
+# Author: Your name you.login@imperial.ac.uk
+# Script: tabtocsv.sh
+# Description: substitute the tabs in the files with commas
+#
+# Saves the output into a .csv file
+# Arguments: 1 -> tab delimited file
+# Date: Oct 2019
+
+#echo "Creating a comma delimited version of $1 ..."
+#cat $1 | tr -s "\t" "," >> $1.csv
+#echo "Done!"
+#exit
+
+#improved script
+
+#check that 1 file has been imported
+if [ "S#" -ne 1 ]; then 
+    echo "Import 1 file"
+    exit 1
+fi 
+
+# check that the file is an existing file
+if [ ! -f "$1" ]; then
+    echo "There is no file" 
+    exit 1
+fi 
+ 
+#convert the tab file to csv
+    echo "Creating a comma delimited version of $1 ..."
+    cat "$1" | tr -s "\t" "," >> "${1}.new.csv"
+    echo "Done!"
+    exit 0
+
+
+
+**********************************************************************
+
+Testing tabtocsv.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+There is no file
+
+**********************************************************************
+
+Encountered error (or warning):
+
+***IGNORE IF THIS ERROR IS EXPECTED AS PART OF AN IN-CLASS EXERCISE***
+
+tabtocsv.sh: line 18: [: S#: integer expression expected
+
+======================================================================
+Inspecting script file FirstExample.tex...
+
+File contents are:
+
+**********************************************************************
+\documentclass[12pt]{article}
+\title{A Simple Document}
+\author{Your Name}
+\date{}
+\begin{document}
+	\maketitle
+	
+	\begin{abstract}
+	This paper analyses a seminal equation in population biology
+	\end{abstract}
+	
+	\section{Introduction}
+	Blah Blah
+	
+	\section{Materials \& Methods}
+	
+	A foundational equation of population biology is:
+	
+	\begin{equation}
+		\frac{dN}{dt}= r N (1 - \frac{N}{K})
+	\end{equation}
+	
+	It was first proposed by Verhulst in 1838 \cite{verhulst1838notice}
+	
+	\bibliographystyle{plain}
+	\bibliography{FirstBiblio}
+\end{document}
+
+
+**********************************************************************
+
+Testing FirstExample.tex...
+
+======================================================================
+Inspecting script file tiff2png.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+
+for f in *.tif; 
+    do  
+        echo "Converting $f"; 
+        convert "$f"  "$(basename "$f" .tif).png"; 
+    done
+
+**********************************************************************
+
+Testing tiff2png.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Converting *.tif
+
+**********************************************************************
+
+Encountered error (or warning):
+
+***IGNORE IF THIS ERROR IS EXPECTED AS PART OF AN IN-CLASS EXERCISE***
+
+convert-im6.q16: unable to open image `*.tif': No such file or directory @ error/blob.c/OpenBlob/2964.
+convert-im6.q16: no images defined `*.png' @ error/convert.c/ConvertImageCommand/3234.
+
+======================================================================
+Inspecting script file csvtospace.sh...
+
+File contents are:
+
+**********************************************************************
+#script that takes a comma separated values and converts it to a space separated values file.
+#directoty
+cd ~/Documents/CMEECourseWork/week1
+
+#input directory 
+dir_input="/home/anna/Documents/CMEECourseWork/week1/data/temperatures"
+#output directory
+dir_output="/home/anna/Documents/CMEECourseWork/week1/data/temperatures"
+
+#check that there is a directory
+if [ ! -d "$dir_input" ]; then
+    echo "there is no directory"
+else
+    echo "there is a directory"
+fi
+ 
+#bash the files to convert
+bash code 1800.csv 1801.csv 1802.csv 1803.csv
+
+
+#converting csv to ssv
+for f in "$dir_input"/*.csv; do
+    if [ -e "$f" ]; then
+        echo "Converting $f to $dir_output/$(basename "$f" .csv).ssv"; 
+        tr ',' ' ' < "$f" > "$dir_output/$(basename "$f" .csv).ssv"
+    else 
+        echo "no CSV files in directory"
+    fi
+    
+done
+
+
+echo "csv file has been successfully converted into a ssv file"
+
+**********************************************************************
+
+Testing csvtospace.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+there is no directory
+no CSV files in directory
+csv file has been successfully converted into a ssv file
+
+**********************************************************************
+
+Encountered error (or warning):
+
+***IGNORE IF THIS ERROR IS EXPECTED AS PART OF AN IN-CLASS EXERCISE***
+
+csvtospace.sh: line 3: cd: /home/mhasoba/Documents/CMEECourseWork/week1: No such file or directory
+/snap/bin/code: /snap/bin/code: cannot execute binary file
+
+======================================================================
+Inspecting script file CountLines.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+
+
+#check that 1 file has been called amd then counting the # of lines
+if [ $# -eq 1 ]; then 
+    NumLines=`wc -l < $1`
+    echo "The file $1 has $NumLines lines"
+else
+    echo "Import 1 file"
+    
+fi 
+
+
+
+**********************************************************************
+
+Testing CountLines.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Import 1 file
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00577s
+
+======================================================================
+Inspecting script file boilerplate.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/sh
+# Author: Your Name your.login@imperial.ac.uk
+# Script: boilerplate.sh
+# Desc: simple boilerplate for shell scripts
+# Arguments: none
+# Date: Oct 2019
+
+echo -e "\nThis is a shell script! \n"
+
+#exit
+
+**********************************************************************
+
+Testing boilerplate.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+
+This is a shell script! 
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00407s
+
+======================================================================
+Inspecting script file UnixPrac1.txt...
+
+File contents are:
+
+**********************************************************************
+
+
+# 1. Count how many lines there are in each file
+
+echo "Lines in the file 407228326.fasta : $(wc -l < ../data/407228326.fasta)"
+
+echo "Lines in the file 407228412.fasta : $(wc -l < ../data/407228412.fasta)"
+
+echo "Lines in the file E.coli.fasta : $(wc -l < ../data/E.coli.fasta)"
+
+
+# 2. Print everything starting from the second line for the E. coli genome
+tail -n +2 ../data/E.coli.fasta
+
+
+# 3. Count the sequence length of this genome
+echo "The sequence length of this genome is: $(sed '1d' ../data/E.coli.fasta | tr -d '\n' | wc -c)"
+
+
+
+
+# 4. Count the matches of a particular sequence, “ATGC” in the genome of E. coli (hint: Start by removing the first line and removing newline characters)
+echo "Sequences of ATGC counted in the genome: $(tail -n +2 ../data/E.coli.fasta | tr -d '\n'|grep -o 'ATGC'| wc -l)"
+
+
+
+# 5. Compute the AT/GC ratio. That is, the (A+T)/(G+C) ratio (as a single number). This is a summary measure of base composition of double-stranded DNA. DNA from different organisms and lineages has different ratios of the A-to-T and G-to-C base pairs (google “Chargaff’s rule”). For example, DNA from organisms that live in hot springs have a higher GC content, the GC base pair is more thermally stable.
+echo "scale=3; $(grep -v '^>' "../data/E.coli.fasta"| tr -d '\n' | grep -o '[AT]' | wc -l)/$(grep -v '^>' "../data/E.coli.fasta"| tr -d '\n' | grep -o '[GC]' | wc -l)"| bc
+
+
+
+
+**********************************************************************
+
+Testing UnixPrac1.txt...
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 6 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 97.0
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
