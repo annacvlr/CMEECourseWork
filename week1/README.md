@@ -1,27 +1,27 @@
 # CMEE bootcamp Week1
-    Week 1 coursework of the Biological Computiating Bootcamp
+Week 1 coursework of the Biological Computating Bootcamp.
 
 ## Description
-    This week covered Shell Sctipting, bash and Git Version Control.
+Week 1 covered Shell Scripting bash and Git Version Control.
 
 ## Languages 
-    shell script
-    plain txt
+shell script
+plain txt
 
 ## Dependencies
-    none
+none
 
 ## Installation
-    none
+none
 
 ## Project Structure and Usage
-    Code: contains script files
-    Data: is where all the data used has been collected
-    Results: where the results from the code are
+- Code: Contains script files.
+- Data: Where all the data used has been collected.
+- Results: Contains the results.
 
 
-Anna Cavalieri Canosa
-    ac524@ic.ac.uk
-
+## Author
+   Anna Cavalieri Canosa
+    	ac524@ic.ac.uk
 
 
