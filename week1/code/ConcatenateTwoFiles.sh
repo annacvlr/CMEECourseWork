@@ -23,6 +23,19 @@ if
     exit 1
 fi 
 
+#check that the files are not empty 
+if [ ! -s "$1" ]; then
+    echo "The first file is empty"
+    exit 1
+fi
+
+if [ ! -s "$2" ]; then
+    echo "The second file is empty"
+    exit 1
+fi
+
+
+
 #create a new file to put 2 combines files in
 output_file="output.txt"
 touch "$output_file"

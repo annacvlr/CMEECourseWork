@@ -12,22 +12,29 @@ echo "The second argument is $2"
 
 # Assigned Variables; Explicit declaration:
 MY_VAR='some string' 
-echo 'the current value of the variable is:' $MY_VAR
+echo 'the current value of the variable is:' "$MY_VAR"
 echo
 echo 'Please enter a new string'
 read MY_VAR
 echo
-echo 'the current value of the variable is:' $MY_VAR
+echo 'the current value of the variable is:' "$MY_VAR"
 echo
 
 ## Assigned Variables; Reading (multiple values) from user input:
 echo 'Enter two numbers separated by space(s)'
 read a b
 echo
-echo 'you entered' $a 'and' $b '; Their sum is:'
+
+if ! test "$a" -eq "$a" 2>/dev/null || ! test "$b" 2>/dev/null; then 
+    echo "Please enter integer numbers"
+    exit 1
+fi
+
+
+echo 'you entered' "$a" 'and' "$b" '; Their sum is:'
 
 ## Assigned Variables; Command substitution
-MY_SUM=$(expr $a + $b)
-echo $MY_SUM
+MY_SUM=$(expr "$a" + "$b")
+echo "$MY_SUM"
 
 

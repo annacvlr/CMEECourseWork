@@ -15,7 +15,7 @@
 #improved script
 
 #check that 1 file has been imported
-if [ "S#" -ne 1 ]; then 
+if [ "$#" -ne 1 ]; then 
     echo "Import 1 file"
     exit 1
 fi 
