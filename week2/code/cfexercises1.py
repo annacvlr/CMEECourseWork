@@ -1,4 +1,7 @@
-
+#!/usr/bin/env python3
+"""
+The Script provides different functions that complete mathematical results, docstring tests have been included
+"""
 
 __author__ = 'Anna Cavalieri (ac524@ic.ac.uk)'
 __version__ = '0.01'

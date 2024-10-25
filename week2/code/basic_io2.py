@@ -1,8 +1,8 @@
+#!/usr/bin/env python3
+"""
+Save the elements of a list to a file
+"""
 
-#############################
-# FILE OUTPUT
-#############################
-# Save the elements of a list to a file
 list_to_save = range(100)
 
 f = open('../Documents/CMEECourseWork/week2/sandbox/test.txt','w')

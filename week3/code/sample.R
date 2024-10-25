@@ -16,15 +16,6 @@ loopy_sample1 <- function(popn, n, num) {
     return(result1)
 }
 
-
-
-
-
-
-###########################################################
-
-#########################################
-
 ## To run "num" iterations of the experiment using a FOR loop on a vector with preallocation:
 loopy_sample2 <- function(popn, n, num) {
     result2 <- vector(,num) #Preallocate expected size
@@ -55,3 +46,36 @@ sapply_sample <- function(popn, n, num) {
     result5 <- sapply(1:num, function(i) myexperiment(popn, n))
     return(result5)
 }
+
+
+
+set.seed(12345)
+popn <- rnorm(10000) # Generate the population
+hist(popn)
+
+
+n <- 100 # sample size for each experiment
+num <- 10000 # Number of times to rerun the experiment
+
+
+#n <- 2
+#num <- 10
+
+print("Using loops without preallocation on a vector took:" )
+print(system.time(loopy_sample1(popn, n, num)))
+
+print("Using loops with preallocation on a vector took:" )
+print(system.time(loopy_sample2(popn, n, num)))
+
+print("Using loops with preallocation on a list took:" )
+print(system.time(loopy_sample3(popn, n, num)))
+
+print("Using the vectorized sapply function (on a list) took:" )
+print(system.time(sapply_sample(popn, n, num)))
+
+print("Using the vectorized lapply function (on a list) took:" )
+print(system.time(lapply_sample(popn, n, num)))
+
+
+
+

@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""Script identifies oak species from a list of plant names using traditional
+    loops and list comprehensions
+    """
+
+
 taxa = [ 'Quercus robur',
          'Fraxinus excelsior',
          'Pinus sylvestris',

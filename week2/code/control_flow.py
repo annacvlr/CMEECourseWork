@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-"""Description of this program or application
+"""Script includes functions to perform mathematical operations, 
+    such as identifying if a number is odd or even, if its prime etc..."
 """
 
 __appname__ = ' [application name here] '

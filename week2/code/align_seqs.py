@@ -1,4 +1,10 @@
-"""script to determine the best alignment of sequence 1 with sequence 2, and its score """
+#!/usr/bin/env python3
+"""
+    This script determines the best alignment of 2 sequences saves the results to a file.
+"""
+
+
+
 import csv
 import doctest
 

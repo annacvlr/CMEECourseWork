@@ -4,4 +4,4 @@ for (i in 1:10) {
     print(i)
 }
 
-#checks if number is odd using %% modulo and prinbts if it is
+#checks if number is odd using %% modulo and prints if it is

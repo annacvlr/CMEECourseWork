@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+""" This script reads a CSV file with plant taxonomy data, it then checks if each genus is "Quercus",
+    oak, and writes the results in a new CSV file in the Results folder. 
+
+
+"""
+
 import csv
 import sys
 import ipdb

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import csv
 # csv module permits reading and writing to CSV files
 """ read a csv file with species data, process each row to extract specoes name & create a new CSV file 

@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+""" Script provides variety of functions and examples demonstrating loops, list comprehesnions and set comprehesnions
+
+"""
+
+
+
 def hello_1 (x):
     for j in range(x):
         if j % 3 ==0:

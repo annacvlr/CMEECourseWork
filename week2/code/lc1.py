@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+"""
+    script extracts latin names, common names, and mean mass from tuple of bird data using list comprehensions and loops
+"""
+
+
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
           ('Delichon urbica','House martin',19),
           ('Junco phaeonotus','Yellow-eyed junco',19.5),

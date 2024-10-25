@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Description of this program or application
+""" code serves a boilerplate, adding more functionality, documentation and error handling.
 """
 
 __appname__ = ' [application name here] '

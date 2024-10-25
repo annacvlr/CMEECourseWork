@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
+""" This script determines whether a number is odd or even
 
-"""Description of this program or application
 """
+
+
 __author__ = 'Anna Cavalieri (ac524@ic.ac.uk)'
 __version__ = '0.01'
 

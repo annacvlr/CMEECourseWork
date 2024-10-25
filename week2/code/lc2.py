@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+""" Script processes Uk rainfall data and demonstrates how to use list comprehensions and conventional loops to filter + display the data"""
+
+
+
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets
 rainfall = (('JAN',111.4),

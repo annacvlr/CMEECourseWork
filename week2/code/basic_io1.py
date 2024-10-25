@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 """script reads a text file line by line printing each line, 
     the second part skips blank lines
     """

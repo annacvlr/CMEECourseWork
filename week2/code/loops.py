@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+
+""" Demonstrates how to use 
+    - FOR loops: for iterating over a sequence
+    - WHILE loops: continues WHILE a specific condition is TRUE
+    """
+
+
 #FOR loops 
 for i in range(5):
     print(i)

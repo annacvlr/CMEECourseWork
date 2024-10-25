@@ -1,6 +1,10 @@
-#############################
-# STORING OBJECTS
-#############################
+#!/usr/bin/env python3
+"""
+    Demonstrates how to save and load a python dictionary using the pickle module
+
+"""
+
+
 # To save an object (even complex) for later use
 my_dictionary = {"a key": 10, "another key": 11}
 
@@ -16,10 +20,6 @@ another_dictionary = pickle.load(f)
 f.close()
 
 print(another_dictionary)
-
-
-
-########## what is testp.p???
 
 with open('../Documents/CMEECourseWork/week2/sandbox/test.txt', "r") as myfile:
     # do things to myfile
