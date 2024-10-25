@@ -1,3 +1,5 @@
+##Handles and writes CSV files
+
 MyData <- read.csv("../data/trees.csv", header = TRUE)
 write.csv(MyData, "../data/MyData.csv")
 write.table(MyData[1,], file ="../results/MyData.csv", append =TRUE)

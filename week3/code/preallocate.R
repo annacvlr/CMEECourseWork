@@ -1,4 +1,4 @@
-
+##Compares the performance of two functions, one without preallocated memory for a vector and one with. 
 NoPreallocFunc <- function(x) {
     a <- vector() 
     for (i in 1:x) {

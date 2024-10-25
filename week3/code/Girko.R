@@ -1,4 +1,5 @@
-###Girko’s circular law, the eigenvalues of a matrix of size are approximately contained in a circle in the complex plane with radius
+##visualise eigenvalues of a random matrix in relatoin to an ellpisem illustrating Girko's Circular law.
+#Demonstrating Girko’s circular law, the eigenvalues of a matrix of size are approximately contained in a circle in the complex plane with radius
 
 
 require(ggplot2)

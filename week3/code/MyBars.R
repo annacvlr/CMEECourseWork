@@ -1,7 +1,7 @@
 #annotating plots 
 
 
-##create a bar chart on the data Results.txt and create a pdf 
+##creates a bar chart on the data Results.txt and creates a pdf .
 require(ggplot2)
 a <- read.table ("../data/Results.txt", header = TRUE)
 head(a)

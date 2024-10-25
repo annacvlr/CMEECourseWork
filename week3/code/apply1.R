@@ -1,3 +1,4 @@
+##performs statistical calculations on a randomly generated matrix
 ##apply used when you want to apply a function to rows or columns of a matrix 
 
 #random matrix

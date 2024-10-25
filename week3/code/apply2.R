@@ -1,3 +1,6 @@
+##Defines a function and demonstrates its application on a matrix.
+
+
 SomeOperation <- function(v) {
     if (sum(v) > 0) {
         return (v *100)

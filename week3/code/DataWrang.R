@@ -1,8 +1,5 @@
-################################################################
-################## Wrangling the Pound Hill Dataset ############
-################################################################
+##Wrangling Pound Hill Dataset.
 
-############# Load the dataset ###############
 # header = false because the raw data don't have real headers
 MyData <- as.matrix(read.csv("../data/PoundHillData.csv", header = FALSE))
 

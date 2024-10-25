@@ -1,3 +1,4 @@
+##Demonstrates various various control structures: conditional statements, for loops, and while loops.
 
 #"""conditional"""
 a <- TRUE

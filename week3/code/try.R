@@ -1,6 +1,4 @@
-
-
-#function runs a simulation that involves sampling from a synthetic population w replacement and takes its mean but only if at least 30 unique samples are obtaines
+##Function runs a simulation that involves sampling from a synthetic population w replacement and takes its mean but only if at least 30 unique samples are obtaines
 
 doit <- function(x) {
     temp_x <- sample(x, replace = TRUE)

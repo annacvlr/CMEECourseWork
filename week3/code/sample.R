@@ -1,4 +1,8 @@
+##defines multiple functions to calculate the mean of random samples from a population and compares the execution time of different sampling methods, including loops with and without preallocation, as well as vectorized approaches using lapply and sapply.
+
+
 #### Vectorization example ####
+
 
 # function: mean of sample size (n) from a population (popn) 
 myexperiment <- function(popn, n) {

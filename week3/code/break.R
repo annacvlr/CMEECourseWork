@@ -1,4 +1,4 @@
-
+##Demonstrates how to break out of a loop using a WHILE loop.
 #breaking loops
 i <- 0
     while (i < Inf) {

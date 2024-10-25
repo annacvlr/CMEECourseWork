@@ -1,4 +1,4 @@
-#this function calculates the heights of trees given the distance of each tree from its base and angle to its top
+#Function calculates the heights of trees given the distance of each tree from its base and angle to its top
 
 #height = distance * tan(radians)
 
