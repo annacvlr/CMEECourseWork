@@ -1,3 +1,6 @@
+## three functions that demonstrate how to use conditionals to check properties of numbers.
+
+
 
 #functions w conditionals
 is.even <- function(n=2) {

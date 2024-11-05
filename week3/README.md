@@ -14,11 +14,15 @@ R
     
 ## Dependencies
 **ipdb** : for enhanced debugging
+**tidyverse** : to use ggplot and melt
+**Jupyter** : to create online files with code and writing
+ 
 
   
 
 ## Installation
 pip install ipdb
+pip install jupyter
     
 
 ## Project Structure and Usage
@@ -28,8 +32,6 @@ pip install ipdb
 
 
 ## Code
-**.Rhistory**: Performs variety of data manipulation tasks, focused on reading and writing CSV files, executing basic operations of matrices and demonstrating the differences between preallocating memory and dynamic growing vectors.
-
 **apply1.R**:Performs statistical calculations on a randomly generated matrix.
 
 **apply2.R**:Defines a function and demonstrates its application on a matrix.
