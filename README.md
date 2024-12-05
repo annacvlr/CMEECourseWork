@@ -458,7 +458,7 @@ These questions involve parallelizing the simulation code to run on an HPC clust
 Section Two: Individual-Based Ecological Neutral Theory Simulation
 
 This section outlines a neutral ecological model, where species' population dynamics follow neutral theory assumptions (i.e., no species have an inherent advantage over others). Functions for initializing communities, simulating neutral steps, and generating time series are provided. The section includes several questions (7-20) where the user must write functions to simulate species richness, neutral evolution, and speciation over time.
-Question 21: Vector Summation
+- Question 21: Vector Summation
 
 A utility function, sum_vect, is defined to add two vectors of unequal lengths. The shorter vector is padded with zeros to match the length of the longer one, ensuring that their elements can be added together element-wise.
 Challenge Questions (A-E)
