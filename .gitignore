@@ -3,5 +3,7 @@
 *.temp
 
 sandbox/
-results/*
-!results/.gitkeep
+**/results/*
+!**/results/.gitkeep
+
+
