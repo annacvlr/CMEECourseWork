@@ -1,0 +1,30 @@
+
+d <- read.table("Data/SparrowSize.txt", header = TRUE)
+#determine type of each variable 
+#Bird id - categorical
+
+hist(d$BirdID)
+summary(d$BirdID)
+
+#year
+hist(d$Year)
+summary(d$Year)
+
+#Tarsus
+
+#Bill
+
+#Wing
+
+
+
+
+
+
+
+#distriibutions
+#find r function to draw probability and density distribution
+
+
+
+

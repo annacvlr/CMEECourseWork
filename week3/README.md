@@ -1,5 +1,5 @@
 # CMEE bootcamp Week3
-Week 3 coursework of the Biological Computating Bootcamp
+Week 3 coursework of the Biological Computing Bootcamp.
 
 ## Description
 Week 3 covered
@@ -48,6 +48,8 @@ pip install jupyter
 
 **DataWrang.R**:Wrangling PoundHill dataset.
 
+**Florida.R**:This R script analyzes the relationship between the year and temperature from the Key West Annual Mean Temperature dataset using a permutation test. It calculates the observed correlation coefficient and performs 10,000 random shuffles of the temperature data to evaluate the likelihood of observing this correlation by chance.
+
 **Girko.R**:Visualise eigenvalues of a random matrix in relatoin to an ellpisem illustrating Girko's Circular law.
 
 **MyBars.R**: Creates a bar chart on the data Results.txt and creates a pdf.
@@ -59,6 +61,8 @@ pip install jupyter
 **plotLin.R**:Creates a linear regression data and creates a pdf from it. 
 
 **PoundHill.R**:Reads a CSV file into a dataframe and converts it into a matrix.
+
+**PP_Regress.R**: This R script performs linear regression analysis on ecological data to explore the relationship between predator and prey masses, categorized by feeding type and predator life stage. The results are saved in a CSV file, and a visual summary of the regression lines and data points is generated in a PDF file.
 
 **preallocate.R**:Compares the performance of two functions, one without preallocated memory for a vector and one with. 
 

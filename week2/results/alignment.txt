@@ -1,0 +1,3 @@
+My best align is:CAATTCGGAT
+ATCGCCGGATTACGGG
+best score: 5
