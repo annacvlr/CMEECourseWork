@@ -4,9 +4,9 @@
 - Week 1 covered Shell Scripting bash and Git Version Control.
 - Week 2 covered Python in general including: variables, data structures, loops, conditionals, comprehensions, functions, docstrings and debugging.
 - Week 3 covered
-        - Coding in R including: 
-        - Data Management and Visualisation including: data wrangling, handling big data, data visualisation, and graphics in R. 
-        - Using Python to build workflows including: subprocesses. 
+       - Coding in R including: 
+       - Data Management and Visualisation including: data wrangling, handling big data, data visualisation, and graphics in R. 
+       - Using Python to build workflows including: subprocesses. 
 
 ## Languages 
 - shell script
@@ -274,114 +274,114 @@ This script calculates standard errors (SE) for various measurements in sparrows
    - Data Preparation:Load the dataset (SparrowSize.txt) and handle missing values using subset.Separate data for specific years (e.g., 2001) for targeted analyses.
    - Calculations: Compute SE for different measurements:Tarsus, Wing, Bill, Mass
    - Statistical Tests:
-        A) One-sample t-test: Compare Tarsus mean to a hypothetical value (e.g., 18.5).
-        B) Two-sample t-test: Assess differences in Tarsus between sexes.
+    A) One-sample t-test: Compare Tarsus mean to a hypothetical value (e.g., 18.5).
+    B) Two-sample t-test: Assess differences in Tarsus between sexes.
    - Summaries:
-        Calculate summary statistics (e.g., mean, length) for variables.
-        Test for specific years or subsets of the data.
+    Calculate summary statistics (e.g., mean, length) for variables.
+    Test for specific years or subsets of the data.
    - Requirements. Required Package: dplyr for data manipulation.The script assumes that missing values are encoded as "NA" and filters these values for each variable.
    - Output:
-        SE Calculations for each measurement and specific year subsets.
-        t-test Results for mean comparisons and between-group differences.
-        Useful for understanding sparrow morphology and its variations.
+    SE Calculations for each measurement and specific year subsets.
+    t-test Results for mean comparisons and between-group differences.
+    Useful for understanding sparrow morphology and its variations.
         
 **HO5.R**: This script compares sparrow wing lengths (Wing) across years and sexes, using statistical tests to identify significant differences. 
   - Key comparisons include:
-        a) Wing length in 2001 vs. the overall (grand-total) mean.
-        b) Differences in wing length between sexes in 2001.
-        c) Differences in wing length between sexes across the entire dataset.
+    a) Wing length in 2001 vs. the overall (grand-total) mean.
+    b) Differences in wing length between sexes in 2001.
+    c) Differences in wing length between sexes across the entire dataset.
 - Data Preparation: Load the SparrowSize.txt dataset. Filter out missing values for Tarsus and ensure accurate comparisons.
 - Analyses:
-        Comparison 1: Test if the mean wing length in 2001 differs from the grand-total mean.
-        Comparison 2: Test if male and female wing lengths differ in 2001.
-        Comparison 3: Test if male and female wing lengths differ in the full dataset.
+    Comparison 1: Test if the mean wing length in 2001 differs from the grand-total mean.
+    Comparison 2: Test if male and female wing lengths differ in 2001.
+    Comparison 3: Test if male and female wing lengths differ in the full dataset.
 - Statistical Tests:
-        Perform one-sample t-tests (e.g., 2001 wing length vs. grand-total mean).
-        Perform two-sample t-tests (e.g., male vs. female wing lengths).
+    Perform one-sample t-tests (e.g., 2001 wing length vs. grand-total mean).
+    Perform two-sample t-tests (e.g., male vs. female wing lengths).
    - Reporting:
-        Summarize results in a table, including sample sizes (N).
-        Interpret results in plain text for clarity.
+   Summarize results in a table, including sample sizes (N).
+       Interpret results in plain text for clarity.
    - Requirements
-        dplyr: For data manipulation.
+       dplyr: For data manipulation.
    - Ensure the dataset is correctly structured with NA values representing missing data.
    - Output
    A. Statistical Test Results:
-        Whether wing length in 2001 differs significantly from the grand-total mean.
-        Differences in wing length between males and females in 2001 and across the full dataset.
+-       Whether wing length in 2001 differs significantly from the grand-total mean.
+ -      Differences in wing length between males and females in 2001 and across the full dataset.
    B. Key Findings:
-        - Wing lengths in 2001 do not significantly differ from the grand-total mean.
-        - Statistically significant differences exist in wing lengths between males and females in 2001, with males having longer wings (mean difference: 2.19 cm).
-        - Differences in wing length between sexes are also significant across the full dataset.
+- Wing lengths in 2001 do not significantly differ from the grand-total mean.    
+- Statistically significant differences exist in wing lengths between males and females in 2001, with males having longer wings (mean difference: 2.19 cm).
+- Differences in wing length between sexes are also significant across the full dataset.
 This analysis provides insights into sparrow wing morphology and its variations across time and sexes.
 
 
 **HO6.R**:This script performs basic statistical analysis and a power analysis for two variables x and y. Key steps include linear regression modeling, calculating effect size, statistical power, and sample size, along with plotting results.
    - Basic Statistical Analysis: 
-        A) Linear Regression: The script fits a linear model (lm(y~x)) to the data and outputs a summary, ANOVA table, residuals, covariance, and variance.
-        B) Plotting: The relationship between x and y is visualized using a scatter plot.
-        C) Regression Equation: The fitted line equation y = 0.8288x + 2.6164 is displayed.
+    A) Linear Regression: The script fits a linear model (lm(y~x)) to the data and outputs a summary, ANOVA table, residuals, covariance, and variance.
+    B) Plotting: The relationship between x and y is visualized using a scatter plot.
+    C) Regression Equation: The fitted line equation y = 0.8288x + 2.6164 is displayed.
    - Statistical Power Analysis:
-        a) WebPower Package: The WebPower package is used to calculate the required sample size for achieving a specific statistical power.
-        b) Effect Size and Power: The script calculates power for a two-sample t-test with an effect size of 0.25 and 80% power. It explores how sample size influences power and generates plots for the results.
-        c) Sample Size for Desired Power: Given a small effect size (e.g., d=0.11), the script estimates the required sample size to achieve 80% power.
+    a) WebPower Package: The WebPower package is used to calculate the required sample size for achieving a specific statistical power.
+    b) Effect Size and Power: The script calculates power for a two-sample t-test with an effect size of 0.25 and 80% power. It explores how sample size influences power and generates plots for the results.
+    c) Sample Size for Desired Power: Given a small effect size (e.g., d=0.11), the script estimates the required sample size to achieve 80% power.
    - Requirements
-        dplyr: For data manipulation.
-        WebPower: For statistical power analysis.
+    dplyr: For data manipulation.
+    WebPower: For statistical power analysis.
    - Output: The summary and ANOVA results from the linear regression model.
    - Plots:
-        A plot showing the relationship between x and y.
-        A plot of statistical power against sample size.
+    A plot showing the relationship between x and y.
+    A plot of statistical power against sample size.
    - Power Calculations:
-        The probability of detecting an effect based on different sample sizes.
-        Estimated sample sizes required for a desired power level.
+    The probability of detecting an effect based on different sample sizes.
+    Estimated sample sizes required for a desired power level.
 This script is useful for understanding how statistical power and sample size relate to detecting meaningful differences in data, and it provides a basis for making data-driven decisions about study design.
 
 **HO6.R**: This script demonstrates how to work with vectors in R, including accessing elements by index, performing simple arithmetic, and plotting linear relationships. It also shows how to create custom plots with grid lines and segments.
    - Vector Indexing:The script creates a sequence of numbers (x) from -5 to 5. It then shows how to access specific elements of the vector using indexing. Examples include accessing the first, second, and last elements of the vector using both direct indexing and a sequence of indices.
    - Plotting a Simple Linear Model:
-        Linear Equation: A linear model y = a + b * x is defined where a = 2 and b = 1.
-        The script then generates a plot of x versus y using this equation.
-        Grid Lines and Segments: The plot is enhanced with grid lines and segments at the origin (both vertical and horizontal lines).
+    Linear Equation: A linear model y = a + b * x is defined where a = 2 and b = 1.
+    The script then generates a plot of x versus y using this equation.
+       Grid Lines and Segments: The plot is enhanced with grid lines and segments at the origin (both vertical and horizontal lines).
    - Plotting Adjustments:
-        The plot is initially drawn with a white background, and grid lines are added using segments() to mark the x and y axes.
-        The abline() function is used to plot the straight line defined by the equation y = 2 + 1 * x.
+       The plot is initially drawn with a white background, and grid lines are added using segments() to mark the x and y axes.
+       The abline() function is used to plot the straight line defined by the equation y = 2 + 1 * x.
    - Output: A plot showing a simple linear relationship between x and y. Grid lines indicating the x and y axes, along with a plotted line based on the linear equation.
 
 **HO7.R**: This script demonstrates how to work with simple linear functions, including accessing vector elements using indexing, applying linear functions to data, and visualizing the results using plots in R.
  - Vector Creation and Indexing:
-        A sequence x from -5 to 5 with a step size of 1 is created using seq(-5, 5, 1).
-        Different methods are used to access elements in the vector x, such as using the [[ ]] operator and checking specific indices:
-            Access the first element (x[[1]]).
-            Access the last element using x[[length(x)]].
-            Indexing is also demonstrated using a sequence (i <- seq(0, 10, 1)).
+       A sequence x from -5 to 5 with a step size of 1 is created using seq(-5, 5, 1).
+       Different methods are used to access elements in the vector x, such as using the [[ ]] operator and checking specific indices:
+    Access the first element (x[[1]]).
+    Access the last element using x[[length(x)]].
+    Indexing is also demonstrated using a sequence (i <- seq(0, 10, 1)).
    - Linear Function:
-        A linear function y = a + b * x is defined, where a = 2 and b = 1. This function is applied to the sequence x to compute y.
+    A linear function y = a + b * x is defined, where a = 2 and b = 1. This function is applied to the sequence x to compute y.
    - Plotting:
-        The relationship between x and y is visualized using the plot() function.
-        Grid lines are added using the segments() function to highlight the x and y axes.
-        The line corresponding to the linear equation y = 2 + 1 * x is added using the abline() function.
+    The relationship between x and y is visualized using the plot() function.
+    Grid lines are added using the segments() function to highlight the x and y axes.
+    The line corresponding to the linear equation y = 2 + 1 * x is added using the abline() function.
    - Plot Customization: The plot background is set to white using col="white". Dashed grid lines are added at the axes using segments(0, -10, 0, 10, lty=3) and segments(-10, 0, 10, 0, lty=3). The line defined by the linear function is drawn in the plot using abline(a=2, b=1).
    - This script provides a simple introduction to basic vector manipulation, applying linear functions, and customizing plots in R. It is a useful starting point for learners who want to understand indexing in vectors and visualizing data through basic linear model
 
 **HO10.R**: This script demonstrates how to calculate and visualize variance and covariance in R. The script also explores the relationship between two variables and shows how their covariance changes depending on the strength of their association.
    - Variance Calculation:
-        The script generates three sets of random data using rnorm(), each with different standard deviations (sqrt(1), sqrt(10), and sqrt(100)).
-        The variance of each dataset is computed using the var() function.
+    The script generates three sets of random data using rnorm(), each with different standard deviations (sqrt(1), sqrt(10), and sqrt(100)).
+    The variance of each dataset is computed using the var() function.
    - Visualizing Data with Plots:
-        The script plots the generated data using the plot() function. For each dataset (y1, y2, and y3), points are plotted, and horizontal and vertical reference lines (abline()) are added.
-        The data points are visualized with color-coded points (col="red", col="blue", col="green"), and gridlines are added for clarity.
+    The script plots the generated data using the plot() function. For each dataset (y1, y2, and y3), points are plotted, and horizontal and vertical reference lines (abline()) are added.
+       The data points are visualized with color-coded points (col="red", col="blue", col="green"), and gridlines are added for clarity.
    - Polygons for Variance: The script uses the polygon() function to illustrate the spread of data points for each dataset. These polygons show how the deviations from the mean vary across the data.
-        The polygons are drawn for each data point to visually emphasize the deviations from the mean.
+    The polygons are drawn for each data point to visually emphasize the deviations from the mean.
    - Covariance Calculation:
-        The script calculates covariance between two variables x and y1 using the cov() function.
-        It plots these variables (x and y1) and includes the covariance value in the plot title using the main=paste() function.
-        The script also explores how the covariance changes for different relationships:
-            A positive relationship (y1 = x * 1 + rnorm(21, 0, sqrt(1))).
-            A random relationship (y2 = rnorm(21, mean=0, sd=sqrt(1))).
-            A negative relationship (y3 = x * (-1) + rnorm(21, 0, sqrt(1))).
+    The script calculates covariance between two variables x and y1 using the cov() function.
+    It plots these variables (x and y1) and includes the covariance value in the plot title using the main=paste() function.
+    The script also explores how the covariance changes for different relationships:
+    A positive relationship (y1 = x * 1 + rnorm(21, 0, sqrt(1))).
+    A random relationship (y2 = rnorm(21, mean=0, sd=sqrt(1))).
+      A negative relationship (y3 = x * (-1) + rnorm(21, 0, sqrt(1))).
    - Plotting with Covariance:
-        Three plots are generated to visualize the covariance between x and y1, x and y2, and x and y3.
-        The covariance values are displayed on each plot's title, illustrating how the relationship between variables affects the covariance.
+    Three plots are generated to visualize the covariance between x and y1, x and y2, and x and y3.
+       The covariance values are displayed on each plot's title, illustrating how the relationship between variables affects the covariance.
 This script demonstrates the concepts of variance and covariance, showing how they can be calculated and visualized in R. By visualizing the data and computing the covariance between variables with different relationships, the script provides insight into how the strength and direction of the association between variables influence these statistics.
 
 **HO11.R**: This R script demonstrates how to explore a dataset (daphnia.txt) and fit a model using multiple variables to explain the response variable (Growth.rate). The script covers the following steps:
@@ -391,11 +391,11 @@ This script demonstrates the concepts of variance and covariance, showing how th
    - Calculating means and standard errors for different groups.
    - Fitting a linear regression model to assess the impact of multiple explanatory variables (Detergent and Daphnia) on the response variable.
    - Output:
-        A) Boxplots: Visualize the distribution of growth rates for different detergent types and Daphnia clones.
-        B) Variance: Check for homogeneity of variance across groups.
-        C) Histogram: Assess the normality of the Growth.rate data.
-        D) Bar Plots: Display means and standard errors for Growth.rate by Detergent and Daphnia.
-        E) Linear Model: Summarizes the effects of Detergent and Daphnia on Growth.rate.
+    A) Boxplots: Visualize the distribution of growth rates for different detergent types and Daphnia clones.
+       B) Variance: Check for homogeneity of variance across groups.
+    C) Histogram: Assess the normality of the Growth.rate data.
+       D) Bar Plots: Display means and standard errors for Growth.rate by Detergent and Daphnia.
+    E) Linear Model: Summarizes the effects of Detergent and Daphnia on Growth.rate.
 
 **HO12.R**: This script demonstrates how to explore, build, fit, interpret, and validate Poisson regression models for fisheries data. The focus is on modeling the relationship between total fish abundance (TotAbund) and explanatory variables such as the mean depth of the water column (MeanDepth) and time periods (Period).
 - Data Exploration: Load dataset on fish abundance, which includes information on the density (Dens), mean depth (MeanDepth), and total abundance (TotAbund) of fish across different sites and time periods (from 1977 to 2002).The dataset is examined using the str() function to understand the structure, and exploratory visualizations are created to observe the relationship between MeanDepth and TotAbund.
@@ -403,9 +403,9 @@ This script demonstrates the concepts of variance and covariance, showing how th
    - Model Diagnostics: A series of diagnostic plots is created using the plot() function to check for model assumptions such as linearity, residuals, and outliers. The script computes Cook's distance to identify potential outliers, with a threshold of Cook’s distance greater than 1. The script examines overdispersion by comparing the model's deviance to the degrees of freedom.
    - Model Refitting and Validation: Based on the model diagnostics, the script refits the model by incorporating the interaction between MeanDepth and Period using the formula TotAbund ~ MeanDepth * Period. The model is re-evaluated using the summary() and anova() functions, and the impact of time periods on fish abundance is assessed.
    - Visualizations: 
-        Scatter plots and boxplots are created to visualize the relationships between MeanDepth, TotAbund, and Period.
-        Scatterplot: Shows the relationship between MeanDepth and TotAbund, colored by Period.
-        Boxplot: Displays the distribution of TotAbund for each time period (Period).
+       Scatter plots and boxplots are created to visualize the relationships between MeanDepth, TotAbund, and Period.
+       Scatterplot: Shows the relationship between MeanDepth and TotAbund, colored by Period.
+       Boxplot: Displays the distribution of TotAbund for each time period (Period).
 This script demonstrates how to build a Poisson regression model in R to analyze fish abundance data. It includes key steps in model fitting, validation, and interpretation, as well as visualizations to help explore the data and assess model assumptions. By incorporating interactions between explanatory variables, the script provides a more accurate understanding of how factors like MeanDepth and Period influence total fish abundance.
 
 ###HPC 
@@ -413,19 +413,19 @@ This script demonstrates how to build a Poisson regression model in R to analyze
 **ac524_HPC_2024_demographic_cluster.R**: This script runs a stochastic demographic simulation model in a High-Performance Computing (HPC) environment, designed to project population dynamics over time. The script leverages parallel processing, allowing different initial conditions to be simulated across multiple nodes.
 Key Features:
    - Clearing Workspace and Loading Functions:
-        The script begins by clearing the R environment and loading necessary functions from an external file (Demographic.R) that supports the simulation process.
+       The script begins by clearing the R environment and loading necessary functions from an external file (Demographic.R) that supports the simulation process.
    - Cluster Job Initialization:
-        The script is designed to run in parallel on an HPC cluster. It uses a job number (iter) to control the seed for random number generation, ensuring each parallel job has a unique initialization.
+       The script is designed to run in parallel on an HPC cluster. It uses a job number (iter) to control the seed for random number generation, ensuring each parallel job has a unique initialization.
    - Model Parameter Definitions:
-        Parameters such as Clutch Distribution, Growth Matrix, and Reproduction Matrix are defined. These matrices describe the population's growth rates, reproduction strategies, and the distribution of offspring.
+    Parameters such as Clutch Distribution, Growth Matrix, and Reproduction Matrix are defined. These matrices describe the population's growth rates, reproduction strategies, and the distribution of offspring.
     - Initial State Setup:
-        The script initializes the population state based on predefined conditions (e.g., adults or spread across life stages). The initial state is chosen depending on the job number (iter), which selects one of several possible conditions for each parallel run.
+       The script initializes the population state based on predefined conditions (e.g., adults or spread across life stages). The initial state is chosen depending on the job number (iter), which selects one of several possible conditions for each parallel run.
    - Running Simulations:
-        The script performs a set of 150 stochastic simulations. Each simulation uses the initial conditions defined earlier and runs a population model over a fixed time period (120 steps). Results are stored in a list and saved to a file specific to the job number.
+       The script performs a set of 150 stochastic simulations. Each simulation uses the initial conditions defined earlier and runs a population model over a fixed time period (120 steps). Results are stored in a list and saved to a file specific to the job number.
    - Data Saving:
-        After running the simulations, the results are saved into a .rda file for further analysis. This file can be used for post-processing or visualization of the simulation outcomes.
+       After running the simulations, the results are saved into a .rda file for further analysis. This file can be used for post-processing or visualization of the simulation outcomes.
    - Parallel Execution:
-        As the script is intended for HPC use, it allows multiple simulations to run concurrently, making efficient use of computational resources. This parallel approach speeds up the analysis process and helps in running large-scale simulations for demographic studies.
+       As the script is intended for HPC use, it allows multiple simulations to run concurrently, making efficient use of computational resources. This parallel approach speeds up the analysis process and helps in running large-scale simulations for demographic studies.
 This script models population dynamics using stochastic processes, where random variables (like growth rates and reproductive success) are incorporated to simulate realistic population changes. It is useful for ecological modeling, conservation studies, and demographic research where understanding population growth under uncertainty is critical. The model can be applied to a variety of species and is particularly useful for studying populations with complex life cycle stages.
 
 **ac524_HPC_2024_main.r** The script is structured to simulate demographic and ecological models for species populations using both deterministic and stochastic methods, employing high-performance computing (HPC) resources for parallel execution. Below is an overview of the key sections:
@@ -435,21 +435,21 @@ User Information and Setup:
     Workspace Note: A reminder is given not to clear the workspace in this section to ensure that essential information remains intact for subsequent code executions.
 
 Section One: Stochastic Demographic Population Model
-Question 0: Initializing Population States
+- Question 0: Initializing Population States
 
 Two functions are defined for initializing the population:
 
   state_initialise_adult: Sets all individuals to the adult life stage.
   state_initialise_spread: Evenly distributes individuals across all life stages with a small adjustment for any remainder.
 
-Question 1: Deterministic Simulation
+- Question 1: Deterministic Simulation
 
 This function runs a deterministic simulation for a population with four life stages and an initial population size of 100 individuals. It compares two initial conditions:
 
     One with all individuals as adults.
     Another with individuals spread across all life stages. The simulation is run for 24 steps, and the population sizes over time are plotted and saved as question_1.png. The plot compares the growth under these two conditions, and a brief explanation about how the initial distribution affects population growth is provided.
 
-Question 2: Stochastic Simulation
+- Question 2: Stochastic Simulation
 
 The function question_2 performs a stochastic simulation with the same initial conditions as Question 1 but includes variability in the model (e.g., clutch distribution). It again runs the simulation for 24 steps and compares the population size time series for both initial conditions. The resulting plot is saved as question_2.png. The function also asks for an explanation of the difference in smoothness between the deterministic and stochastic simulations.
 Subsequent Questions 3-6: HPC and Cluster Execution
@@ -469,8 +469,8 @@ Plotting and Output
 For most questions, a plot is generated and saved as a .png file. These plots visualize population growth or changes in species diversity over time based on the simulated scenarios.
 General Observations and Tips:
 
-    Modular Approach: Functions are used to modularize tasks (e.g., simulation, initialization, plotting), making it easier to maintain and test individual components.
-    HPC Utilization: For scalability, especially in larger simulations, the script utilizes HPC resources for parallel execution, which is essential for running large-scale simulations in reasonable timeframes.
+ -   Modular Approach: Functions are used to modularize tasks (e.g., simulation, initialization, plotting), making it easier to maintain and test individual components.
+  -  HPC Utilization: For scalability, especially in larger simulations, the script utilizes HPC resources for parallel execution, which is essential for running large-scale simulations in reasonable timeframes.
 
 This script is designed for advanced ecological modeling, where both deterministic and stochastic models are used to simulate population dynamics over time. It emphasizes the importance of understanding how initial conditions influence long-term population growth and how computational tools can be used to explore complex ecological systems efficiently. The integration of HPC resources ensures that large-scale simulations can be handled efficiently, while the modular code structure promotes flexibility and reusability in the modeling process.
 
@@ -480,21 +480,21 @@ This script is designed for advanced ecological modeling, where both determinist
 **ac524_HPC_2024_test.R**: The script sources two key R files, ac524_HPC_2024_main.R and Demographic.R, which contain functions to be used in the exercises. It is structured to allow for testing and debugging functions that will be used in cluster-based simulations.
 Key Features:
 
-    Function Sourcing: The script begins by sourcing external R scripts that contain the necessary functions for the exercises. These files are expected to define the key functions used for the exercises.
-    Function Testing: The script allows you to test individual functions (like species_richness(), state_initialise_adult(), and sum_vect()) interactively to ensure they work correctly before being used in larger simulations.
-    Environment Cleanup: It starts by clearing the R environment (rm(list=ls())), ensuring that no leftover objects interfere with the script’s execution.
-    Debugging: The script is useful for debugging, where you can modify and test smaller parts of the code. However, it is recommended that the code be tidied up before final submission, especially before integrating it into the main simulation run.
+  -  Function Sourcing: The script begins by sourcing external R scripts that contain the necessary functions for the exercises. These files are expected to define the key functions used for the exercises.
+  -  Function Testing: The script allows you to test individual functions (like species_richness(), state_initialise_adult(), and sum_vect()) interactively to ensure they work correctly before being used in larger simulations.
+   - Environment Cleanup: It starts by clearing the R environment (rm(list=ls())), ensuring that no leftover objects interfere with the script’s execution.
+   - Debugging: The script is useful for debugging, where you can modify and test smaller parts of the code. However, it is recommended that the code be tidied up before final submission, especially before integrating it into the main simulation run.
 
-The main goal of the script is to define and test functions in isolation, preparing them for later use in the main simulation code. This approach is meant to help maintain an organized workflow and ensure that all functions are properly tested before running large simulations on the cluster.
+- The main goal of the script is to define and test functions in isolation, preparing them for later use in the main simulation code. This approach is meant to help maintain an organized workflow and ensure that all functions are properly tested before running large simulations on the cluster.
 
 **Demongraphic.R**:This script is designed for simulating stochastic and deterministic demographic models in a population over time, as part of the CMEE 2024 HPC exercises. It contains functions to model population dynamics, both deterministically (fixed transitions between states) and stochastically (incorporating randomness in transitions).
 Key Functions:
 
-    Deterministic Model:
+ -   Deterministic Model:
         deterministic_step(): Calculates the next state of the population using a projection matrix.
         deterministic_simulation(): Runs a simulation for a given length, applying the deterministic model to update population sizes at each time step.
 
-    Stochastic Model:
+   - Stochastic Model:
         multinomial(): Simulates the multinomial distribution for survival/maturation and death probabilities.
         survival_maturation(): Updates the population state based on survival and maturation probabilities derived from a growth matrix.
         random_draw(): Makes a random selection based on a probability distribution.
@@ -503,7 +503,7 @@ Key Functions:
         stochastic_step(): One step of the stochastic model, updating the population with survival, maturation, and offspring.
         stochastic_simulation(): Runs a full simulation of the population using the stochastic model, stopping if the population reaches zero.
 
-Purpose:
+- Purpose:
 
     Deterministic models assume fixed transitions and predictable population changes, while stochastic models incorporate randomness, making them more suitable for modeling real-world biological processes where variability and uncertainty are common.
     The script is designed to simulate both models over a specified time period and can be extended for use in high-performance computing (HPC) environments to run large-scale simulations efficiently.
