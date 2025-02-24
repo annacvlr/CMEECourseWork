@@ -1,6 +1,20 @@
 # CMEE 2024 HPC exercises R code provided 
 # Stochastic and deterministic demographic model
 
+
+sum_vect <- function(x, y) {
+  lenx <- length(x) 
+  leny <- length(y)
+
+  # Ensure both vectors are of equal length by padding with zeroes
+  if(lenx < leny) {
+    x <- c(x, rep(0, leny - lenx))
+  } else if (leny < lenx) {
+    y <- c(y, rep(0, lenx - leny))
+  }
+  return(x + y)
+}
+
 deterministic_step <- function(state,projection_matrix){
   new_state = projection_matrix %*% state
   return(new_state)
@@ -87,9 +101,14 @@ stochastic_simulation <- function(initial_state,growth_matrix,reproduction_matri
   }
   
   if (length(population_size) < simulation_length + 1){ # fill remaining entries with 0
-    population_size[(length(population_size) + 1):(simulation_length + 1)]
+    population_size[(length(population_size) + 1):(simulation_length + 1)] <- 0
   }
   
   return(population_size)
 }
+
+
+
+
+if (dev.cur() > 1) dev.off()  # Close only if an active device exists
 
